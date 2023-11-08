@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth duration-300">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Azkal's Portofolio</title>
+    <style type="text/tailwindcss">
+      /* * {
+        border: solid 1px red;
+      } */
+    </style>
+  </head>
+  <body class="text-sky-800 dark:bg-slate-800 duration-300 dark:text-white">
+    <div class="flex items-center mb-0 bg-white dark:bg-slate-800 justify-between mt-6 px-6 rounded-full top-0 z-50 sticky lg:px-8" aria-label="Global" id="nav">
+      <div id="testToggle" class="flex max-sm:hidden">
+        <img id="sun" class="w-8 max-h-8 mr-1 dark:hidden" src="../src/asset/sun.png" alt="light" />
+        <img id="moon" class="w-7 max-h-7 mr-2 hidden dark:block" src="../src/asset/moon.png" alt="dark" />
+        <div class="mt-1">
+          <label class="relative inline-flex items-center cursor-pointer">
+            <input id="toggle" type="checkbox" value="" class="sr-only peer" />
+            <div
+              class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"
+            ></div>
+          </label>
+        </div>
+      </div>
+      <ul class="-mx-2.5 flex items-center justify-center rounded-md p-2.5">
+        <li><a href="#" class="font-semibold leading-6 text-sky-700 dark:text-sky-300 mx-4 text-xl">Home</a></li>
+        <li><a href="#project" class="font-semibold leading-6 text-sky-700 dark:text-sky-300 mx-4 text-xl">Project</a></li>
+        <li><a href="#aboutMe" class="font-semibold leading-6 text-sky-700 dark:text-sky-300 mx-4 text-xl">About me</a></li>
+        <li><a href="#contact" class="font-semibold leading-6 text-sky-700 dark:text-sky-300 mx-4 text-xl">Contact</a></li>
+      </ul>
+      <div id="login">
+        <!-- <img src="asset/userIcon.png" /> -->
+        <a href="./tes.html" class="login text-sm font-semibold text-sky-700 dark:text-sky-200">Sign In</a>
+      </div>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="dark:hidden h-fit">
+      <path
+        fill="#bae6fd"
+        fill-opacity="1"
+        d="M0,192L34.3,208C68.6,224,137,256,206,250.7C274.3,245,343,203,411,192C480,181,549,203,617,181.3C685.7,160,754,96,823,101.3C891.4,107,960,181,1029,197.3C1097.1,213,1166,171,1234,133.3C1302.9,96,1371,64,1406,48L1440,32L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"
+      ></path>
+    </svg>
+    <div id="content" class="flex items-center justify-evenly dark:py-36 bg-sky-200 dark:bg-inherit">
+      <div id="me" class="items-center ml-5">
+        <h1 class="text-4xl text-sky-700 dark:text-white font-semibold">Azkal Baihaqi</h1>
+        <h2 class="text-xl py-1 text-sky-700 dark:text-white">I Write Code; | Undergraduate Information System</h2>
+        <h3 class="text-xl font-light text-sky-700 dark:text-white">TechStack;</h3>
+        <div id="TechStack" class="flex p-3">
+          <a><img class="w-20 mr-1 duration-200 hover:w-28" src="../src/asset/html.png" /></a>
+          <a><img class="w-20 mr-1 duration-200 hover:w-28" src="../src/asset/php.png" /></a>
+          <a><img class="w-20 mr-1 duration-200 hover:w-28" src="../src/asset/css.png" /></a>
+          <a><img class="w-20 mr-1 duration-200 hover:w-28" src="../src/asset/js.png" /></a>
+          <a><img class="w-20 mr-1 duration-200 hover:w-28" src="../src/asset/java.png" /></a>
+          <a><img class="w-20 mr-1 duration-200 hover:w-28" src="../src/asset/figma.png" /></a>
+        </div>
+        <button onclick="typeWriter()" type="button" class="rounded-md p-1 px-2 text-white text-xl bg-indigo-500 m-3" id="go">LetsGo</button>
+        <span id="typing"></span>
+      </div>
+      <div id="animation">
+        <img src="../src/asset/coworking-male-programmer-writing-program-code.gif" class="w-96 h-max max-sm:hidden" />
+      </div>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="dark:hidden">
+      <path
+        fill="#bae6fd"
+        fill-opacity="1"
+        d="M0,256L34.3,224C68.6,192,137,128,206,117.3C274.3,107,343,149,411,144C480,139,549,85,617,80C685.7,75,754,117,823,128C891.4,139,960,117,1029,133.3C1097.1,149,1166,203,1234,202.7C1302.9,203,1371,149,1406,122.7L1440,96L1440,0L1405.7,0C1371.4,0,1303,0,1234,0C1165.7,0,1097,0,1029,0C960,0,891,0,823,0C754.3,0,686,0,617,0C548.6,0,480,0,411,0C342.9,0,274,0,206,0C137.1,0,69,0,34,0L0,0Z"
+      ></path>
+    </svg>
+    <div id="project" class="flex-col justify-center">
+      <h1 class="flex justify-center text-5xl text-sky-700 dark:text-sky-300 font-semibold">My Projects</h1>
+      <div class="flex justify-center mx-5 my-10 max-lg:flex-col">
+        <div id="card" class="w-96 my-5 mx-10 flex flex-col max-lg:mx-auto">
+          <img src="../src/asset/project/calc.png" alt="" />
+          <div id="cardTitle">
+            <h1 class="text-xl font-semibold text-sky-700 dark:text-sky-300">Simple Calculator</h1>
+            <p class="text-sky-700 dark:text-white">A simple calculator i made with vanilla HTML, CSS, and JavaScript as my learning project. This project build in 2021</p>
+            <a href="https://azkxd.github.io/Kalkulator/" class="mt-3 font-semibold text-indigo-400">Visit project!</a>
+          </div>
+        </div>
+        <div id="card" class="flex flex-col w-96 my-5 mx-10 max-lg:mx-auto">
+          <img src="../src/asset/project/loginpage.png" alt="" />
+
+          <div id="cardTitle">
+            <h1 class="text-xl font-semibold text-sky-700 dark:text-sky-300">Simple Login Page</h1>
+            <p class="text-sky-700 dark:text-white">A simple login page made with PHP, vanilla CSS, with a few Tailwind as my bootcamp in Camp404 to project learning PHP. This project build in 2022</p>
+            <a href="#" class="mt-3 font-semibold text-indigo-400">Visit project!</a>
+          </div>
+        </div>
+        <div id="card" class="w-96 my-5 mx-10 flex flex-col max-lg:mx-auto">
+          <img src="../src/asset/project/smansa.png" alt="" class="" />
+          <div id="cardTitle">
+            <h1 class="text-xl font-semibold text-sky-700 dark:text-sky-300">School Website</h1>
+            <p class="text-sky-700 dark:text-white">A beta website mockup made with HTML and Bootstrap as my OSIS SMAN 1 Semarang project, unfortunately it was cancelled due to covid. This project build in 2022</p>
+            <a href="https://github.com/azkalbhqi/web-smansa" class="mt-3 font-semibold text-indigo-400">Visit project!</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <svg class="dark:hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#bae6fd" fill-opacity="1" d="M0,160L40,144C80,128,160,96,240,90.7C320,85,400,107,480,122.7C560,139,640,149,720,170.7C800,192,880,224,960,224C1040,224,1120,192,1200,176C1280,160,1360,160,1400,160L1440,160L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path></svg>
+
+    <div id="aboutMe" class="bg-sky-200 dark:bg-inherit">
+      <h1 class="flex justify-center text-5xl text-sky-700 dark:text-sky-300 font-semibold">About Me</h1>
+      <div class="min-h-screen p-3 relative">
+        <div class="w-96 " style="scroll-snap-type: x mandatory">
+          <!-- first -->
+          <div class="">
+            <input class="sr-only peer" type="radio" name="carousel" id="carousel-1" checked />
+            <!-- content #1 -->
+            <div class="w-96 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white dark:bg-slate-700 rounded-lg shadow-lg transition-all duration-300 opacity-0 peer-checked:opacity-100 peer-checked:z-10 z-0">
+              <div class="w-96 h-64 overflow-hidden">
+
+                <img class="rounded-t-lg w-96 " src="../src/asset/img/photograph.jpg" alt="" />
+              </div>
+              <div class="py-4 px-8">
+                <h1 class="hover:cursor-pointer mt-2 text-gray-900 font-bold text-2xl tracking-tight dark:text-white">Photography</h1>
+                <p class="hover:cursor-pointer py-3 text-gray-600 leading-6 dark:text-gray-200">I like to capture a beautiful and memorable moment with my beloved camera. Sometimes i take it as a freelance job or project.</p>
+              </div>
+              <!-- controls -->
+              <div class="absolute top-1/2 w-full flex justify-between z-20">
+                <label for="carousel-3" class="inline-block text-red-600 cursor-pointer -translate-x-5 bg-white rounded-full shadow-md active:translate-y-0.5">
+                  <img src="../src/asset/back.png" alt="">
+                </label>
+                <label for="carousel-2" class="inline-block text-red-600 cursor-pointer translate-x-5 bg-white rounded-full shadow-md active:translate-y-0.5">
+                  <img src="../src/asset/next.png" alt="">
+                  </svg>
+                </label>
+              </div>
+            </div>
+          </div>
+          <!-- second -->
+          <div class="">
+            <input class="sr-only peer" type="radio" name="carousel" id="carousel-2" />
+            <!-- content #2 -->
+            <div class="w-96 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-lg shadow-lg transition-all duration-300 opacity-0 peer-checked:opacity-100 peer-checked:z-10 z-0 dark:bg-slate-700">
+              <div class="w-96 h-64 overflow-hidden">
+
+                <img class="rounded-t-lg w-96 " src="../src/asset/img/ardu.jpeg" alt="" />
+              </div>
+              <div class="py-4 px-8">
+                <h1 class="hover:cursor-pointer mt-2 text-gray-900 font-bold text-2xl tracking-tight dark:text-white">Plays Arduino</h1>
+                <p class="hover:cursor-pointer py-3 text-gray-600 leading-6 dark:text-gray-200">I make a few project on Arduino. i love to make a robotic project such as radar, automation, and other IoT project. i take this as a freelance job too ;)</p>
+              </div>
+              <!-- controls -->
+              <div class="absolute top-1/2 w-full flex justify-between z-20">
+                <label for="carousel-1" class="inline-block text-blue-600 cursor-pointer -translate-x-5 bg-white rounded-full shadow-md active:translate-y-0.5">
+                  <img src="../src/asset/back.png" alt="">
+                </label>
+                <label for="carousel-3" class="inline-block text-blue-600 cursor-pointer translate-x-5 bg-white rounded-full shadow-md active:translate-y-0.5">
+                  <img src="../src/asset/next.png" alt="">
+                </label>
+              </div>
+            </div>
+          </div>
+          <!-- three -->
+          <div class="">
+            <input class="sr-only peer" type="radio" name="carousel" id="carousel-3" />
+            <!-- content #3 -->
+            <div class="w-96 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-lg shadow-lg transition-all duration-300 opacity-0 peer-checked:opacity-100 peer-checked:z-10 z-0 dark:bg-slate-700">
+              <div class="w-96 h-64 overflow-hidden">
+
+                <img class="rounded-t-lg w-96 " src="../src/asset/img/golf.jpg" alt="" />
+              </div>
+              <div class="py-4 px-8">
+                <h1 class="hover:cursor-pointer mt-2 text-gray-900 font-bold text-2xl tracking-tight dark:text-white">Golf</h1>
+                <p class="hover:cursor-pointer py-3 text-gray-600 leading-6 dark:text-gray-200">
+                  I play golf. I play it for fun but there is one of my dream to play for professional, just wish me luck
+                </p>
+              </div>
+              <!-- controls -->
+              <div class="absolute top-1/2 w-full flex justify-between z-20">
+                <label for="carousel-2" class="inline-block text-yellow-600 cursor-pointer -translate-x-5 bg-white rounded-full shadow-md active:translate-y-0.5">
+                  <img src="../src/asset/back.png" alt="Prev">
+                </label>
+                <label for="carousel-1" class="inline-block text-yellow-600 cursor-pointer translate-x-5 bg-white rounded-full shadow-md active:translate-y-0.5">
+                  <img src="../src/asset/next.png" alt="Next">
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      <svg xmlns="http://www.w3.org/2000/svg" class="dark:hidden block" viewBox="0 0 1440 320"><path fill="#bae6fd" fill-opacity="1" d="M0,96L40,133.3C80,171,160,245,240,261.3C320,277,400,235,480,181.3C560,128,640,64,720,58.7C800,53,880,107,960,138.7C1040,171,1120,181,1200,160C1280,139,1360,85,1400,58.7L1440,32L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path></svg>
+   
+    <div id="contact" class="flex justify-center p-5 max-lg:flex-col border-spacing-1 bg-white dark:bg-inherit">
+      <div id="contactme" class="w-96 mx-10 my-5 text-sky-700 max-lg:mx-auto">
+        <h3 class="text-2xl font-bold tracking-tight text-sky-700 dark:text-sky-300">Contact Me</h3>
+        <p class="mt-6 text-base leading-7 text-sky-700 dark:text-white">I am excited to contribute my talents and continue growing as a professional in the dynamic field of web design and content creation. Let's connect!</p>
+        <div class="flex justify-start p-2 duration-300">
+          <a href="https://www.instagram.com/azkalbhqi_/"><img class="mx-4 duration-300 hover:w-20" src="../src/asset/instagram.png" /></a>
+          <a href="https://twitter.com/AzkalB"><img class="mx-4 duration-300 hover:w-20" src="../src/asset/X.png" /></a>
+          <a href="https://www.linkedin.com/in/azkal-baihaqi-97b468279/"><img class="mx-4 duration-300 hover:w-20" src="../src/asset/linkedin.png" /></a>
+        </div>
+      </div>
+      <div id="text" class="w-96 ml-10 max-lg:mx-auto">
+        <h1 class="text-2xl my-5 font-bold tracking-tight text-sky-700 dark:text-sky-300">Any Suggestion?</h1>
+        <div id="alertSubmit" class="bg-green-100 border-l-4 border-green-500 text-green-700 py-2 px-4 rounded-md hidden" role="alert">
+          <p class="font-bold">Success!</p>
+          <p>Sabar yak ntar diproses ;)</p>
+        </div>
+        <form name="aspirasi" >
+
+          <textarea name="kritik" class="w-96 h-24 my-5 p-5 text-xs bg-sky-800 border-spacing-0 rounded-md text-white"></textarea>
+          <button id="submit" type="submit" class="rounded-md p-1 px-2 text-white text-sm bg-indigo-500">Submit</button>
+        </div>
+      </form>
+      <div id="footer"></div>
+    </div>
+
+    <script src="../src/script.js"></script>
+    <!--  -->
+  </body>
+</html>
