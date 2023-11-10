@@ -1,4 +1,5 @@
-const checkbox = document.querySelector("#toggle");
+const checkboxNav = document.querySelector("#toggle");
+const checkboxSb = document.querySelector("#togglesb");
 const html = document.querySelector("html");
 const btnSubmit = document.querySelector("#submit");
 const alertSubmit = document.querySelector("#alertSubmit");
@@ -8,14 +9,20 @@ const sun = document.querySelector("#sun");
 const moon = document.querySelector("#moon");
 
 if (localStorage.theme === "dark" || (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
-  checkbox.checked = true;
+  checkboxNav.checked = true;
+  checkboxSb.checked = true;
   html.classList.add("dark");
 } else {
-  checkbox.checked = false;
+  checkboxNav.checked = false;
+  checkboxSb.checked = false;
 }
 
-checkbox.addEventListener("click", function () {
-  checkbox.checked ? html.classList.add("dark") : html.classList.remove("dark");
+checkboxNav.addEventListener("click", function () {
+  checkboxNav.checked ? html.classList.add("dark") : html.classList.remove("dark");
+});
+
+checkboxSb.addEventListener("click", function () {
+  checkboxSb.checked ? html.classList.add("dark") : html.classList.remove("dark");
 });
 
 // function thx() {

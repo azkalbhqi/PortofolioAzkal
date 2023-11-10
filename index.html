@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <link rel="stylesheet" href="./public/css/style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.0.0/flowbite.min.js"></script>
     <title>Azkal's Portofolio</title>
     <style type="text/tailwindcss">
       /* * {
@@ -13,10 +14,62 @@
     </style>
   </head>
   <body class="text-sky-800 dark:bg-slate-800 duration-300 dark:text-white">
-    <div class="flex items-center mb-0 bg-white dark:bg-slate-800 justify-between mt-6 px-6 rounded-full top-0 z-50 sticky lg:px-8" aria-label="Global" id="nav">
-      <div id="testToggle" class="flex max-sm:hidden">
-        <img id="sun" class="w-8 max-h-8 mr-1 dark:hidden" src="../src/asset/sun.png" alt="light" />
-        <img id="moon" class="w-7 max-h-7 mr-2 hidden dark:block" src="../src/asset/moon.png" alt="dark" />
+    <!-- SIDEBAR -->
+    <button data-drawer-target="default-sidebar" data-drawer-toggle="default-sidebar" aria-controls="default-sidebar" type="button" class="inline-flex items-center p-2 mt-2 ml-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+      <span class="sr-only">Open sidebar</span>
+      <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+         <path clip-rule="evenodd" fill-rule="evenodd" d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"></path>
+        </svg>
+      </button>
+      <aside id="default-sidebar" class="fixed top-0 left-0  w-64 h-screen transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
+        
+    <div class="h-full px-3 py-4 overflow-y-auto bg-gray-50 bg-opacity-80 dark:bg-gray-800 dark:bg-opacity-80 sm:hidden">
+    <div class="bg-gray-50 dark:bg-gray-800 ">    
+    <button data-drawer-target="default-sidebar" data-drawer-toggle="default-sidebar" aria-controls="default-sidebar" type="button" class="inline-flex items-center p-2 mt-2 ml-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+      <span class="sr-only">Open sidebar</span>
+      <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+         <path clip-rule="evenodd" fill-rule="evenodd" d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"></path>
+      </svg>
+   </button>
+  </div>
+   
+      <div id="sidebar" aria-label="Global" class="sm:hidden p-3 my-3 mx-3 ">
+
+        <div id="testToggle" class="flex">
+          <img id="sun" class="w-8 max-h-8 mr-1 dark:hidden" src="./src/asset/sun.png" alt="light" />
+          <img id="moon" class="w-7 max-h-7 mr-2 hidden dark:block" src="./src/asset/moon.png" alt="dark" />
+          <div class="mt-1">
+            <label class="relative inline-flex items-center cursor-pointer">
+              <input id="togglesb" type="checkbox" value="" class="sr-only peer" />
+              <div
+                class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"
+              ></div>
+            </label>
+          </div>
+        </div>
+        <ul class="flex-col -mx-2.5 p-2.5 ">
+          <li class="my-2"><a href="#" class="font-semibold leading-6 text-sky-700 dark:text-sky-300 mx-4 text-xl">Home</a></li>
+          <li class="my-2"><a href="#project" class="font-semibold leading-6 text-sky-700 dark:text-sky-300 mx-4 text-xl">Project</a></li>
+          <li class="my-2"><a href="#aboutMe" class="font-semibold leading-6 text-sky-700 dark:text-sky-300 mx-4 text-xl">Aboutme</a></li>
+          <li class="my-2"><a href="#contact" class="font-semibold leading-6 text-sky-700 dark:text-sky-300 mx-4 text-xl">Contact</a></li>
+        </ul>
+        <div id="login">
+          <!-- <img src="asset/userIcon.png" /> -->
+          <a href="./public/tes.html" class="login text-sm font-semibold text-sky-700 dark:text-sky-200">Sign In</a>
+        </div>
+  
+      </div>
+
+
+    </div>
+
+  </aside>
+    
+    <!-- NAVBAR -->
+    <div  class="flex items-center mb-0 bg-white dark:bg-slate-800 justify-between mt-6 px-6 rounded-full top-0 z-50 sticky lg:px-8 max-sm:hidden" aria-label="Global" id="navbar">
+      <div id="testToggle" class="flex">
+        <img id="sun" class="w-8 max-h-8 mr-1 dark:hidden" src="./src/asset/sun.png" alt="light" />
+        <img id="moon" class="w-7 max-h-7 mr-2 hidden dark:block" src="./src/asset/moon.png" alt="dark" />
         <div class="mt-1">
           <label class="relative inline-flex items-center cursor-pointer">
             <input id="toggle" type="checkbox" value="" class="sr-only peer" />
@@ -29,7 +82,7 @@
       <ul class="-mx-2.5 flex items-center justify-center rounded-md p-2.5">
         <li><a href="#" class="font-semibold leading-6 text-sky-700 dark:text-sky-300 mx-4 text-xl">Home</a></li>
         <li><a href="#project" class="font-semibold leading-6 text-sky-700 dark:text-sky-300 mx-4 text-xl">Project</a></li>
-        <li><a href="#aboutMe" class="font-semibold leading-6 text-sky-700 dark:text-sky-300 mx-4 text-xl">About me</a></li>
+        <li><a href="#aboutMe" class="font-semibold leading-6 text-sky-700 dark:text-sky-300 mx-4 text-xl">Aboutme</a></li>
         <li><a href="#contact" class="font-semibold leading-6 text-sky-700 dark:text-sky-300 mx-4 text-xl">Contact</a></li>
       </ul>
       <div id="login">
@@ -193,8 +246,8 @@
         <p class="mt-6 text-base leading-7 text-sky-700 dark:text-white">I am excited to contribute my talents and continue growing as a professional in the dynamic field of web design and content creation. Let's connect!</p>
         <div class="flex justify-start p-2 duration-300">
           <a href="https://www.instagram.com/azkalbhqi_/"><img class="mx-4 duration-300 hover:w-20" src="./src/asset/instagram.png" /></a>
-          <a href="https://twitter.com/AzkalB"><img class="mx-4 duration-300 hover:w-20" src="../src/asset/X.png" /></a>
-          <a href="https://www.linkedin.com/in/azkal-baihaqi-97b468279/"><img class="mx-4 duration-300 hover:w-20" src="../src/asset/linkedin.png" /></a>
+          <a href="https://twitter.com/AzkalB"><img class="mx-4 duration-300 hover:w-20" src="./src/asset/X.png" /></a>
+          <a href="https://www.linkedin.com/in/azkal-baihaqi-97b468279/"><img class="mx-4 duration-300 hover:w-20" src="./src/asset/linkedin.png" /></a>
         </div>
       </div>
       <div id="text" class="w-96 ml-10 max-lg:mx-auto">
@@ -213,6 +266,6 @@
     </div>
 
     <script src="./src/script.js"></script>
-    <!--  -->
+    
   </body>
 </html>
