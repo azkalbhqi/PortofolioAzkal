@@ -16,7 +16,6 @@ if (localStorage.theme === "dark" || (!("theme" in localStorage) && window.match
   checkboxNav.checked = false;
   checkboxSb.checked = false;
 }
-
 checkboxNav.addEventListener("click", function () {
   checkboxNav.checked ? html.classList.add("dark") : html.classList.remove("dark");
 });
